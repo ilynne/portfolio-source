@@ -1,0 +1,19 @@
+---
+title: Projects
+---
+
+      <article>
+        <h1><%= current_page.data.title %></h1>
+        <p><%= lorem.sentences 3 %></p>
+      </article>
+
+      <article class="project">
+      <% data.projects.project.each do |f| %>
+        <h2><%= f['name'] %></h2>
+        <img src="images/<%= f['image'] %>" alt="photo of a <%= f['name'] %>">
+        <% 3.times do %>
+        <p><%= lorem.sentences 5 %></p>
+        <% end %>
+        <p><%= lorem.sentences 2 %> <%= link_to 'read more...', "projects/#{f['name'].gsub(/\s/,'-').downcase}.html" %></p>
+      <% end %>
+      </article>

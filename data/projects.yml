@@ -1,0 +1,10 @@
+project:
+  - name: Felted Sheep
+    image: felted-sheep-1.png
+    date: 2010-01-15
+  - name: Another Felted Sheep
+    image: felted-sheep-2.png
+    date: 2012-04-22
+  - name: Felted Chicken
+    image: felted-chicken.png
+    date: 2013-12-07

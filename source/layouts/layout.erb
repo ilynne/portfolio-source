@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title><%= current_page.data.title || "Lynne Cooney" %></title>
+  <%= stylesheet_link_tag "lynne" %>
+  </head>
+  
+  <body class="<%= page_classes.gsub(/_/,'-') %>">
+    <header>
+      <%= image_tag 'lynne-tiara.png', alt: 'Lynne in a pink hat' %>
+      <nav>
+        <ul>
+          <li><%= link_to 'Projects:', '/projects.html' %></li>
+          <% data.projects.project.each do |f| %>
+            <li><%= link_to "#{f['name']}", "projects/#{f['name'].gsub(/\s/,'-').downcase}.html" %></li>
+          <% end %>
+        </ul>
+      </nav>
+    </header>
+    <section class="main">
+<%= yield %>
+    </section>
+
+    <footer>
+      <nav>
+        <ul>
+          <li><%= link_to 'Lynne Cooney'.upcase, '/index.html' %></li>
+          <li><%= link_to 'About Me'.upcase, '/about-me.html' %></li>
+          <li><%= link_to 'Projects'.upcase, '/projects.html' %></li>
+        </ul>
+      </nav>
+      <p>&copy;<%= '2014' %> Lynne Cooney</p>
+    </footer>
+  </body>
+</html>
