@@ -1,10 +1,13 @@
 project:
   - name: Felted Sheep
     image: felted-sheep-1.png
-    date: 2010-01-15
+    date: 2010-01-15 00:08:47 -0800
+    artist: Chris
   - name: Another Felted Sheep
     image: felted-sheep-2.png
     date: 2012-04-22
+    artist: Barrie
   - name: Felted Chicken
     image: felted-chicken.png
     date: 2013-12-07
+    artist: Leslie

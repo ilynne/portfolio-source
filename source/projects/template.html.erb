@@ -1,10 +1,12 @@
 ---
-title: Project Description
 ---
 
       <article>
         <h1><%= title %></h1>
-        <img src="../images/<%= image %>" alt="photo of a <%= image %>">
+        <figure>
+          <img src="../images/<%= image %>" alt="photo of a <%= image %>">
+          <figcaption>Completed on <time datetime="<%= date.to_s %>"><%= DateTime.parse(date.to_s).strftime('%-d %B %Y') %></time> by <%= artist %></figcaption>
+        </figure>
         <% 9.times do %>
         <p><%= lorem.sentences 5 %></p>
         <% end %>

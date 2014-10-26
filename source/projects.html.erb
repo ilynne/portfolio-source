@@ -5,15 +5,22 @@ title: Projects
       <article>
         <h1><%= current_page.data.title %></h1>
         <p><%= lorem.sentences 3 %></p>
+        <aside>
+          <q><%= lorem.sentences 3 %>.</q>
+        </aside>
+        <p><%= lorem.sentences 5 %></p>
+        <p><%= lorem.sentences 2 %></p>
       </article>
 
+<% data.projects.project.each do |f| %>
       <article class="project">
-      <% data.projects.project.each do |f| %>
         <h2><%= f['name'] %></h2>
-        <img src="images/<%= f['image'] %>" alt="photo of a <%= f['name'] %>">
-        <% 3.times do %>
-        <p><%= lorem.sentences 5 %></p>
+        <figure>
+          <a href="<%= "projects/#{f['name'].gsub(/\s/,'-').downcase}.html" %>"><img src="images/<%= f['image'] %>" alt="photo of a <%= f['name'] %>"></a>
+          <figcaption>Completed on <time datetime="<%= f['date']%>"><%= DateTime.parse(f['date'].to_s).strftime('%-d %B %Y') %></time> by <%= f['artist'] %></figcaption>
+        </figure>
+        <% 7.times do %>
+        <p><%= lorem.sentences 5 %>.</p>
         <% end %>
         <p><%= lorem.sentences 2 %> <%= link_to 'read more...', "projects/#{f['name'].gsub(/\s/,'-').downcase}.html" %></p>
-      <% end %>
-      </article>
+      </article><% end %>

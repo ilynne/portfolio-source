@@ -2,8 +2,8 @@
 <html lang="en">
 <head>
   <meta charset="utf-8" />
-  <title><%= current_page.data.title || "Lynne Cooney" %></title>
-  <%= stylesheet_link_tag "lynne" %>
+  <title><%= current_page.data.title || "#{project['name']}" || "Lynne Cooney" %></title>
+  <%= stylesheet_link_tag "first-stylesheet" %>
   </head>
   
   <body class="<%= page_classes.gsub(/_/,'-') %>">
@@ -13,7 +13,7 @@
         <ul>
           <li><%= link_to 'Projects:', '/projects.html' %></li>
           <% data.projects.project.each do |f| %>
-            <li><%= link_to "#{f['name']}", "projects/#{f['name'].gsub(/\s/,'-').downcase}.html" %></li>
+          <li><%= link_to "#{f['name']}", "/projects/#{f['name'].gsub(/\s/,'-').downcase}.html" %></li>
           <% end %>
         </ul>
       </nav>
@@ -30,7 +30,7 @@
           <li><%= link_to 'Projects'.upcase, '/projects.html' %></li>
         </ul>
       </nav>
-      <p>&copy;<%= '2014' %> Lynne Cooney</p>
+      <p class="copyright">&copy;<time datetime="<%= DateTime.now.strftime('%Y') %>"><%= DateTime.now.strftime('%Y') %></time> Lynne Cooney. Last updated <time datetime="<%= DateTime.now.strftime('%F') %>"><%= DateTime.now.strftime('%-d %B %Y') %></time>.</p>
     </footer>
   </body>
 </html>

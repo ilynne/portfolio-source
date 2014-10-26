@@ -72,9 +72,9 @@ configure :build do
 
   set :relative_links, true
 
-  set :index_file, "default.php"
+  set :strip_index_file, false
 
   data.projects.project.each do |f|
-    proxy "/projects/#{f['name'].gsub(/\s/,'-').downcase}.html", '/projects/template.html', :locals => { :title => f['name'], :image => f['image']  }, :ignore => true
+    proxy "/projects/#{f['name'].gsub(/\s/,'-').downcase}.html", '/projects/template.html', :locals => { :title => f['name'], :image => f['image'], :date => f['date'], :artist => f['artist'], :project => f  }, :ignore => true
   end
 end

@@ -6,3 +6,29 @@ title: Portfolio
         <h1><%= current_page.data.title %></h1>
         <p>This is not my real portfolio. This site is for a front-end class.</p>
       </article>
+
+      <article>
+        <h2>This site contains no information at all about the following projects:</h2>
+        <ol>
+          <% data.projects.project.each do |f| %>
+          <li><%= f[:name] %></li>
+          <ol>
+            <% 5.times do %>
+            <li><%= lorem.words 5 %></li>
+            <% end %>
+          </ol>
+          <% end %>
+        </ol>
+        <p>Well, there are a few pictures.</p>
+      </article>
+
+      <article class="newspaper">
+        <h2>Here be Columns</h2>
+        <p><%= lorem.sentences 5 %></p>
+        <% 7.times do %>
+        <h3><%= lorem.words 2 %></h3>
+        <% 3.times do %>
+        <p><%= lorem.sentences 3 %></p>
+        <% end %>
+        <% end %>
+      </article>
