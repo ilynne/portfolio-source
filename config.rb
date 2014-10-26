@@ -47,7 +47,7 @@
 #   end
 # end
 
-set :css_dir, 'stylesheets'
+set :css_dir, 'styles'
 
 set :images_dir, 'images'
 
