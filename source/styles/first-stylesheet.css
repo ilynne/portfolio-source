@@ -1,13 +1,19 @@
+/* basic html tags */
 body {
     font-family: "Helvetica Neue", Arial, "Lucida Grande", sans-serif;
     margin: 0rem; background-color: lightgrey}
 h1, h2, h3, h4, h5, h6 {color: indigo; font-weight: normal; text-transform: uppercase; }
 ol { list-style: upper-roman; }
 ol ol { list-style: armenian;}
+a { text-decoration: none;}
+a:hover { color: firebrick;}
+time { font-family: monospace; }
+/* header styling */
 header { border-bottom: 1px solid black; background-color: lightgrey;}
 header img {max-width: 30rem; display: inline; vertical-align: bottom; max-width: 10rem; border-right: 1px solid black;}
 header h1 {display: inline;}
 header nav {display: inline; }
+/* navigation styles */
 nav ul, nav ul li {display: inline; list-style: none; padding-left: 0rem; margin-right: 0.5rem;}
 nav ul li a {
     color: darkgray;
@@ -16,24 +22,27 @@ nav ul li a {
     text-transform: uppercase;
     text-decoration: none; text-shadow: 0px 0px 2px white;}
 nav ul li a:hover { color: yellow; text-shadow: 0px 0px 2px darkgrey; }
+/* main body section */
 section.main { padding: 2rem; background-color: white;}
 section.main h1 {font-size: 2rem}
 section.main article {max-width: 50rem;}
 section.main img {max-width: 6rem;}
 section.main article img:first-of-type { max-width: 18rem; border: 1px solid gray; }
 section.main p:first-of-type { font-size: 1.2rem; }
+/* aside for project quotes */
 aside { max-width: 18rem;
         border-top: 2px solid red;
         border-bottom: 2px solid red;
         padding: 1rem;
         margin: 0rem 1rem 0rem 0rem;
         float: left; }
+/* footer styling */
 footer { border-top: 1px solid black; background-color: lightgrey; margin-bottom: 0rem; padding: .5rem;}
 footer p { font-size: .7rem; }
-a { text-decoration: none;}
-a:hover { color: firebrick;}
+/* figure styles */
 figure { margin-left: 0rem; }
 figure figcaption { font-size: .9rem;}
+/* article styling */
 article p:first-of-type:first-letter { font-size: 2rem; }
 article p:first-of-type { color: red; }
 article p:nth-of-type(2) { color: orange; }
@@ -49,7 +58,7 @@ article.project figure a:hover img { border: 1px solid mediumorchid; background-
 article.project figure a:active img { border: 1px solid red; background-color: red; }
 article.project p:first-of-type { font-size: 1.2rem; }
 article.project p:last-of-type { color: darkgray;}
-time { font-family: monospace; }
+/* three column layout */
 .newspaper {
     -webkit-columns: 12rem 3; /* Chrome, Safari, Opera */
     -moz-columns: 12rem 3; /* Firefox */

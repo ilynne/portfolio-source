@@ -2,7 +2,6 @@
 ---
 
       <article>
-        <h1><%= title %></h1>
         <figure>
           <img src="../images/<%= image %>" alt="photo of a <%= image %>">
           <figcaption>Completed on <time datetime="<%= date.to_s %>"><%= DateTime.parse(date.to_s).strftime('%-d %B %Y') %></time> by <%= artist %></figcaption>

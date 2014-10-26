@@ -3,7 +3,6 @@ title: Projects
 ---
 
       <article>
-        <h1><%= current_page.data.title %></h1>
         <p><%= lorem.sentences 3 %></p>
         <aside>
           <q><%= lorem.sentences 3 %>.</q>
@@ -23,4 +22,5 @@ title: Projects
         <p><%= lorem.sentences 5 %>.</p>
         <% end %>
         <p><%= lorem.sentences 2 %> <%= link_to 'read more...', "projects/#{f['name'].gsub(/\s/,'-').downcase}.html" %></p>
-      </article><% end %>
+      </article>
+<% end %>

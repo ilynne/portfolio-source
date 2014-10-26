@@ -3,7 +3,7 @@ title: Portfolio
 ---
 
       <article>
-        <h1><%= current_page.data.title %></h1>
+        <h2>Site for UW Class</h2>
         <p>This is not my real portfolio. This site is for a front-end class.</p>
       </article>
 
@@ -11,12 +11,13 @@ title: Portfolio
         <h2>This site contains no information at all about the following projects:</h2>
         <ol>
           <% data.projects.project.each do |f| %>
-          <li><%= f[:name] %></li>
-          <ol>
-            <% 5.times do %>
-            <li><%= lorem.words 5 %></li>
-            <% end %>
-          </ol>
+          <li><%= f[:name] %>
+            <ol>
+              <% 5.times do %>
+              <li><%= lorem.words 5 %></li>
+              <% end %>
+            </ol>
+          </li>
           <% end %>
         </ol>
         <p>Well, there are a few pictures.</p>
