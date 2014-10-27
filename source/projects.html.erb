@@ -3,6 +3,7 @@ title: Projects
 ---
 
       <article>
+        <h2>Validator Wants a Heading</h2>
         <p><%= lorem.sentences 3 %></p>
         <aside>
           <q><%= lorem.sentences 3 %>.</q>
@@ -16,7 +17,7 @@ title: Projects
         <h2><%= f['name'] %></h2>
         <figure>
           <a href="<%= "projects/#{f['name'].gsub(/\s/,'-').downcase}.html" %>"><img src="images/<%= f['image'] %>" alt="photo of a <%= f['name'] %>"></a>
-          <figcaption>Completed on <time datetime="<%= f['date']%>"><%= DateTime.parse(f['date'].to_s).strftime('%-d %B %Y') %></time> by <%= f['artist'] %></figcaption>
+          <figcaption>Completed on <time datetime="<%= DateTime.parse(f['date'].to_s).strftime('%F') %>"><%= DateTime.parse(f['date'].to_s).strftime('%-d %B %Y') %></time> by <%= f['artist'] %></figcaption>
         </figure>
         <% 7.times do %>
         <p><%= lorem.sentences 5 %>.</p>

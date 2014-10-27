@@ -19,7 +19,7 @@
       </nav>
     </header>
     <section class="main">
-      <h1><%= current_page.data.title %></h1>
+      <h1><%= current_page.data.title || "#{project['name']}" || "Lynne Cooney" %></h1>
 <%= yield %>
     </section>
 

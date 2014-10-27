@@ -3,7 +3,30 @@ title: About Me
 ---
 
       <article>
+        <h2>Templates are King</h2>
         <p>I never ever produce websites that are difficult to maintain. Why would anyone? One of the first problems that HTML threw at me in 1994 was the lack of any ability to include text files. Boilerplate content, such as headers and footers, needed to be copied and pasted into each page. If you added, removed or renamed a link, you were in for a tedious afternoon.</p>
 
         <p>I did not accept that limitation in 1994 and I will not accept it today. Boilerplate content should only need to be edited in one place. Copying and pasting from file to file or worse retyping it by hand is not acceptable. It greatly increases the likelihood of errors and reduces the chances that a site will be maintained. It is poor practice on any website larger than one page.</p>
       </article>
+
+      <table>
+        <thead>
+          <tr>
+            <th>Item</th>
+            <th>Available?</th>
+            <th>Price</th>
+          </tr>
+        </thead>
+        <tbody>
+          <% 10.times do %>
+          <% available = ['yes','no','maybe'].sample %>
+          <% price = (1..99999).to_a.sample / 100.00 %>
+          <% expensive = price > 500 ? 'expensive' : 'cheap' %>
+          <tr>
+            <td><%= (lorem.words 1).titleize %></td>
+            <td class="<%= available %>"><%= available %></td>
+            <td class="currency-usd <%= expensive %>"><%= number_to_currency price %></td>
+          </tr>
+          <% end %>
+        </tbody>
+      </table>
