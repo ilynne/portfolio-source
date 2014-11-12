@@ -3,6 +3,8 @@
 <head>
   <meta charset="utf-8" />
   <title><%= current_page.data.title || "#{project['name']}" || "Lynne Cooney" %></title>
+  <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+  <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300' rel='stylesheet' type='text/css'>
   <%= stylesheet_link_tag "first-stylesheet" %>
   </head>
   
@@ -29,6 +31,23 @@
           <li><%= link_to 'Lynne Cooney'.upcase, '/index.html' %></li>
           <li><%= link_to 'About Me'.upcase, '/about-me.html' %></li>
           <li><%= link_to 'Projects'.upcase, '/projects.html' %></li>
+          <li>
+            <a href="http://facebook.com"><span class="fa-stack fa-2x">
+              <i class="fa fa-circle fa-stack-2x"></i>
+              <i class="fa fa-facebook fa-stack-1x fa-inverse"></i>
+            </span></a>
+          </li>
+          <li>
+            <a href="http://github.com"><span class="fa-stack fa-2x">
+              <i class="fa fa-github fa-stack-2x"></i>
+            </span></a>
+          </li>
+          <li>
+            <a href="http://linkedin.com"><span class="fa-stack fa-2x">
+              <i class="fa fa-circle fa-stack-2x"></i>
+              <i class="fa fa-linkedin fa-stack-1x fa-inverse"></i>
+            </span></a>
+          </li>
         </ul>
       </nav>
       <p class="copyright">&copy;<time datetime="<%= DateTime.now.strftime('%Y') %>"><%= DateTime.now.strftime('%Y') %></time> Lynne Cooney. Last updated <time datetime="<%= DateTime.now.strftime('%F') %>"><%= DateTime.now.strftime('%-d %B %Y') %></time>.</p>

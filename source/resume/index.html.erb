@@ -1,0 +1,11 @@
+---
+title: Resumé
+---
+
+<% data.resume.resume.each do |f| %>
+  <article>
+    <h2><%= f[:title] %></h2>
+    <h3><%= "#{f[:company]}" %></h3>
+    <p><%= "#{f[:summary]}" %></p>
+  </article>
+<% end %>

@@ -1,0 +1,43 @@
+resume:
+  - company: MyPizza.com
+    location: remote
+    date_start: 2014-01-30
+    date_end:
+    title: Web Developer - Ruby on Rails
+    summary: Admin site for MyPizza.com. Payment processing, order processing, customer service interface to MyPizza.com orders. Site is built in Ruby on Rails using Amazon RDS and AWS servers.
+  - company: MMP|bench
+    location: Seattle, WA
+    date_start: 2012-11-01
+    date_end: 2014-01-22
+    title: Web Developer
+    summary: Maintenance and updates to existing JSP/SQL Server site. Migrated database from SQL Server 2000 to SQL Server 2008. Built new site using ASP.Net C#.
+  - company: Xante Corporation
+    location: Mobile, AL
+    date_start: 2005-07-30
+    date_end: 2011-06-17
+    title: Web Developer
+    summary: Over the course of my six years at Xante I wrote, maintained and updated internal and external web applications using ASP.Net, VB.Net and C#, JQuery, CSS, PHP and JSP. Oracle, Foxpro and Access database integration. Converted static sites to ASP.Net. Automated many site functions. Created intranet applications to allow content creators to update site. Wrote a custom email blast application. Built e-commerce site from the ground up. I photographed products for web and print. I created promotional videos and set up online streaming demos for the sales team.
+  - company: United States Sports Academy
+    location: Daphne, AL
+    date_start: 2003-11-01
+    date_end: 2005-02-30
+    title: Web Developer
+    summary: Five websites, internal and external.  Converted static html pages into a database driven, interactive site using ASP and SQL Server. Implemented a a new course delivery system using PHP and MySQL (Moodle). The course delivery system also interfaced with a Paradox based student information system, the new SQL Server student information system, an Access based commercial shopping cart and a custom shopping cart that I wrote for use during the migration to the commercial software. Also responsible for several major print publications.
+  - company: MacHome Journal
+    location: San Francisco, CA
+    date_start: 2001-03-15
+    date_end: 2001-09-30
+    title: Web Developer
+    summary: Created data-driven site using Lasso and Filemaker. The site included a searchable database of product reviews & feature stories, tips, many customized subscription pages and product purchase pages. Responsible for local area network and all servers (mail, ftp, listservs, fileservers, etc.) Hardware support for Macintosh and PC computers.
+  - company: Computer Task Group
+    location: Atlanta, GA
+    date_start: 1997-12-01
+    date_end: 2000-03-01
+    title: Web Developer
+    summary: Arthritis Foundation's internal and external web sites. Perl, ASP, SQL Server and IIS. Created an ASP chat system with multiple chat rooms and automatic archiving. Interactive polls. I was also responsible for an internal web site. It includes web-based access to company e-mail through pop gateways and Outlook Web Access.
+  - company: Arthritis Foundation
+    location: Atlanta, GA
+    date_start: 1990-06-01
+    date_end: 1997-11-30
+    title: Web Developer/Graphic Designer
+    summary: All aspects of web site design, creation, and maintenance. Structure and look, coding, database design, graphics and server administration. Conducted pilot tests of online support groups and bulletin boards. Traveled to conferences to conduct internet workshops for Arthritis Foundation staff and members. Created and maintained detailed web sites for each of the 60 nationwide chapters, as well as creating applications to allow chapters to update their own sites. Print design and production of long documents (books, manuals, directories and brochures). Graphics for all departments and chapter offices.
