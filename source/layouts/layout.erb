@@ -5,35 +5,49 @@
   <title><%= current_page.data.title || "#{project['name']}" || "Lynne Cooney" %></title>
   <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
   <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300' rel='stylesheet' type='text/css'>
-  <%= stylesheet_link_tag "css/foundation" %>
-  <%= stylesheet_link_tag "css/normalize" %>
-  <%= stylesheet_link_tag "first-stylesheet" %>
+  <%= stylesheet_link_tag "http://cdn.foundation5.zurb.com/foundation.css" %>
   <%= stylesheet_link_tag "css/lynne-foundation" %>
   <script src="js/vendor/modernizr.js"></script>
   </head>
   
   <body class="<%= page_classes.gsub(/_/,'-') %>">
     <header>
-      <nav class="top-bar">
+      <nav class="top-bar" data-topbar>
         <ul class="title-area">
           <li class="name">
-            <h1>Lynne Cooney</h1>
+            <h1><%= link_to 'Lynne Cooney'.upcase, '/index.html' %></h1>
+          </li>
+          <li>
+            <li class="toggle-topbar menu-icon"><a href="#"><span>menu</span></a></li>
+          </li>
+          <li>
+          <li class="toggle-topbar menu-icon"><a href="#"><span>menu</span></a></li>
           </li>
         </ul>
+        <section class="top-bar-section">
+          <!-- Right Nav Section -->
+          <ul class="right">
+            <li class="divider"></li>
+            <li>
+              <a href="resume/index.html">Resume</a>
+            </li>
+            <li class="divider"></li>
+            <li class="has-dropdown">
+              <%= link_to 'Projects', '/projects.html' %>
+              <ul class="dropdown">
+                <% data.projects.project.each do |f| %>
+                  <li><%= link_to "#{f['name']}", "/projects/#{f['name'].gsub(/\s/, '-').downcase}.html" %></li>
+                <% end %>
+              </ul>
+            </li>
+          </ul>
+        </section>
+
       </nav>
 
     </header>
-    <header>
+
       <%= image_tag 'lynne-tiara.png', alt: 'Lynne in a pink hat' %>
-      <nav>
-        <ul>
-          <li><%= link_to 'Projects:', '/projects.html' %></li>
-          <% data.projects.project.each do |f| %>
-          <li><%= link_to "#{f['name']}", "/projects/#{f['name'].gsub(/\s/,'-').downcase}.html" %></li>
-          <% end %>
-        </ul>
-      </nav>
-    </header>
     <section class="main">
       <h1><%= current_page.data.title || "#{project['name']}" || "Lynne Cooney" %></h1>
 <%= yield %>
@@ -66,5 +80,10 @@
       </nav>
       <p class="copyright">&copy;<time datetime="<%= DateTime.now.strftime('%Y') %>"><%= DateTime.now.strftime('%Y') %></time> Lynne Cooney. Last updated <time datetime="<%= DateTime.now.strftime('%F') %>"><%= DateTime.now.strftime('%-d %B %Y') %></time>.</p>
     </footer>
+    <script src="http://code.jquery.com/jquery-latest.js"></script>
+    <script src="http://cdn.foundation5.zurb.com/foundation.js"></script>
+    <script>
+      $(document).foundation();
+    </script>
   </body>
 </html>
