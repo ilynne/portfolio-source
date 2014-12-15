@@ -47,11 +47,24 @@
 
     </header>
 
-      <%= image_tag 'lynne-tiara.png', alt: 'Lynne in a pink hat' %>
-    <section class="main">
-      <h1><%= current_page.data.title || "#{project['name']}" || "Lynne Cooney" %></h1>
-<%= yield %>
-    </section>
+    <div class="row">
+      <div class="medium-9 columns">
+        <section class="main">
+          <h1><%= current_page.data.title || "#{project['name']}" || "Lynne Cooney" %></h1>
+          <%= yield %>
+        </section>
+      </div>
+
+      <div class="medium-3 columns">
+        <div class="panel">
+          <figure>
+            <%= image_tag 'lynne-tiara.png', alt: 'Lynne in a pink hat' %>
+            <figcaption>Every day is tiara day.</figcaption>
+          </figure>
+        </div>
+
+      </div>
+    </div>
 
     <footer>
       <nav>
