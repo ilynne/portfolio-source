@@ -14,9 +14,9 @@
     <header>
       <nav>
         <ul>
-          <li><%= link_to 'Lynne Cooney'.upcase, '/index.html' %></li>
-          <li><%= link_to 'Resume', '/resume/index.html' %></li>
-          <li><%= link_to 'Projects', '/projects.html' %></li>
+          <li <%= "class='active'" if current_page.path == 'index.html' %>><%= link_to 'Lynne Cooney'.upcase, '/index.html' %></li>
+          <li <%= "class='active'" if current_page.path == 'resume/index.html' %>><%= link_to 'Resume', '/resume/index.html' %></li>
+          <li <%= "class='active'" if current_page.path == 'colophon.html' %>><%= link_to 'Colophon', '/colophon.html' %></li>
           <li><a href="http://github.com/ilynne"><i class="fa fa-github fa-lg"></i> GitHub</a></li>
           <li><a href="http://linkedin.com/in/lynnety"><i class="fa fa-linkedin-square fa-lg"></i> LinkedIn</a></li>
         </ul>
@@ -25,24 +25,46 @@
 
     <div class="main-container cf">
       <div class="main-content">
-        <section>
-          <h1><%= current_page.data.title || "#{project['name']}" || "Lynne Cooney" %></h1>
-          <%= yield %>
-        </section>
+        <%= yield %>
       </div>
 
     <div class="aux-content cf">
       <aside class="well backgroundShade1">
-          <figure>
-            <%= image_tag 'lynne-tiara.png', alt: 'Lynne in a pink hat' %>
-            <figcaption>Every day is tiara day.</figcaption>
-          </figure>
+        <figure>
+          <%= image_tag 'lynne-tiara.png', alt: 'Lynne and her tiara' %>
+          <figcaption>Every day is tiara day.</figcaption>
+        </figure>
+        <p><a href="mailto:lynne@ilynne.com">lynne@ilynne.com</a></p>
       </aside>
+      
+      <aside class="well">
+        <h3>Wayback Machine:</h3>
+        <ul>
+          <li><a href="https://web.archive.org/web/19990428003854/http://www.arthritis.org/">Arthritis Foundation</a></li>
+          <li><a href="https://web.archive.org/web/20010330082459/http://www.machome.com/">MacHome Magazine</a></li>
+          <li><a href="https://web.archive.org/web/20050302094332/http://www.ussa.edu/">United States Sports Academy</a></li>
+          <li><a href="https://web.archive.org/web/20100524161545/http://www.xante.com/">Xante</a></li>
+          <li><a href="https://web.archive.org/web/20140103151927/http://www.mmp-bench.com/">mmp|BENCH</a></li>
+        </ul>
+      </aside>
+
+      <aside class="well">
+        <h3>A few of my skills</h3>
+        <ul>
+          <% data.skills.skill.each do |f| %>
+            <li><%= f['name'] %></li>
+          <% end %>
+        </ul>
+      </aside>
+      
+    <% if content_for?(:sidebar) %>
+      <%= yield_content :sidebar %>
+    <% end %>
     </div>
   </div>
 
   <footer>
-    <p class="centered">&copy;<time datetime="<%= DateTime.now.strftime('%Y') %>"><%= DateTime.now.strftime('%Y') %></time> Lynne Cooney. Last updated <time datetime="<%= DateTime.now.strftime('%F') %>"><%= DateTime.now.strftime('%-d %B %Y') %></time>.</p>
+    <p class="right-aligned">&copy;<time datetime="<%= DateTime.now.strftime('%Y') %>"><%= DateTime.now.strftime('%Y') %></time> Lynne Cooney. Last updated <time datetime="<%= DateTime.now.strftime('%F') %>"><%= DateTime.now.strftime('%-d %B %Y') %></time>.</p>
   </footer>
   </body>
 </html>

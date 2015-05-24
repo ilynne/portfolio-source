@@ -119,6 +119,9 @@ header nav ul li.last > a:after,
 header nav ul li:last-child > a:after {
   display: none;
 }
+header nav ul li.active a:before {
+  width: 100%;
+}
 header nav ul li.active a {
   color: black;
 }
@@ -222,7 +225,7 @@ h5,
 h6,
 table,
 figure {
-  margin: 1rem 0 0 0;
+  margin: 0.5rem 0 0 0;
   line-height: 1.5em;
 }
 /* layout
@@ -238,8 +241,7 @@ section :first-child {
 footer {
   display: block;
   clear: both;
-  padding: 0 0.5rem;
-  font-size: smaller;
+  margin: 0 1rem 1rem 1rem;
 }
 img {
   max-width: 100%;
@@ -286,6 +288,12 @@ figcaption {
 .aux-content {
   float: left;
   width: 25%;
+}
+.aux-content .well {
+  margin-top: 1rem;
+}
+.aux-content :first-child {
+  margin-top: 0;
 }
 .main-content,
 .aux-content {

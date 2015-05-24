@@ -1,35 +1,27 @@
 ---
-title: Portfolio
+title: About Me
 ---
 
-      
-        <h2>Site for UW Class</h2>
-        <p>This is not my real portfolio. This site is for a front-end class.</p>
-      
+    <section>
+      <h1>Welcome!</h1>
+      <p>A long time ago I fired up my text-only web browser for the first time. I followed all the links. There was a menu item labeled "view source." "What is that?" I selected it and the bones of the page I was viewing were revealed to me. "OK, I can do <em>this</em>."</p>
+      <p>You can still find my first website if you use the wayback machine: <%= link_to "don't look", 'https://web.archive.org/web/19961018085715/http://www.arthritis.org/' %>. We thought it was pretty cool.</p>
+      <p>Over the years, I have written about CSS, Flash, SVG and more. I used to keep recipes on my site. It's all still around here on a hard drive.</p>
+      <p>These days, I am a certified (University of Washington) Ruby on Rails developer.</p>
+      <figure>
+        <%= image_tag 'hercules.jpg', alt: 'Herculese' %>
+        <figcaption>This is my dog.</figcaption>
+      </figure>
+    </section>
 
-      
-        <h2>This site contains no information at all about the following projects:</h2>
-        <ol>
-          <% data.projects.project.each do |f| %>
-          <li><%= f[:name] %>
-            <ol>
-              <% 5.times do %>
-              <li><%= lorem.words 5 %></li>
-              <% end %>
-            </ol>
-          </li>
-          <% end %>
-        </ol>
-        <p>Well, there are a few pictures.</p>
-      
 
-      
-        <h2>Here be Columns</h2>
-        <p><%= lorem.sentences 5 %></p>
-        <% 7.times do %>
-        <h3><%= lorem.words 2 %></h3>
-        <% 3.times do %>
-        <p><%= lorem.sentences 3 %></p>
-        <% end %>
-        <% end %>
+<% content_for :sidebar do %>
+<aside class="well">
+        <figure>
+          <%= image_tag 'echostage.jpg', alt: 'Waiting for the Replacements' %>
+          <figcaption>At a 2015 Replacements show in DC.</figcaption>
+        </figure>
+
+      </aside>
+<% end %>
       

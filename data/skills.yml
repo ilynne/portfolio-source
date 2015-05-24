@@ -1,0 +1,15 @@
+skill:
+  - name: Ruby on Rails
+  - name: HTML/HTML5
+  - name: CSS/CSS3
+  - name: JavaScript
+  - name: CoffeeScript
+  - name: RSpec
+  - name: Less
+  - name: jQuery
+  - name: MySQL
+  - name: SQL Server
+  - name: Git
+  - name: REST
+  - name: APIs
+  - name: TDD
