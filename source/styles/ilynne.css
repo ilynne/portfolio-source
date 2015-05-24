@@ -1,0 +1,348 @@
+/*
+@header-font: 'Molengo', Georgia, Times, serif;
+@body-font: 'Muli', Verdana, Helvetica, sans-serif;
+@body-font: 'Lekton', Helvetica, Arial, sans-serif;
+@header-font: 'Corben', Georgia, Times, serif;
+@body-font: 'Nobile', Helvetica, Arial, sans-serif;
+@header-font: 'Playfair Display', Georgia, serif;
+*/
+.body-font {
+  font-family: 'Vollkorn', Georgia, Times, serif;
+  font-size: .9rem;
+  line-height: 1.3rem;
+}
+.alt-header-font {
+  font-family: 'Vollkorn', Georgia, Times, serif;
+  font-weight: bold;
+}
+.default-well {
+  background: #ffffff;
+  border-radius: 6px;
+  padding: 1rem;
+}
+@media only screen and (max-width: 479px) {
+  .default-well {
+    border-radius: 0;
+  }
+}
+/**
+ * For modern browsers
+ * 1. The space content is one way to avoid an Opera bug when the
+ *    contenteditable attribute is included anywhere else in the document.
+ *    Otherwise it causes space to appear at the top and bottom of elements
+ *    that are clearfixed.
+ * 2. The use of `table` rather than `block` is only necessary if using
+ *    `:before` to contain the top-margins of child elements.
+ */
+.cf:before,
+.cf:after {
+  content: " ";
+  /* 1 */
+  display: table;
+  /* 2 */
+}
+.cf:after {
+  clear: both;
+}
+/**
+ * For IE 6/7 only
+ * Include this rule to trigger hasLayout and contain floats.
+ */
+.cf {
+  *zoom: 1;
+}
+header nav {
+  width: auto;
+  background: #6866f4;
+}
+header nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  line-height: 1;
+  display: block;
+  zoom: 1;
+}
+header nav ul li {
+  display: inline-block;
+  padding: 0;
+  margin: 0;
+}
+header nav ul li a:link,
+header nav ul li a:active,
+header nav ul li a:visited {
+  color: white;
+  text-decoration: none;
+  display: block;
+  padding: 15px 25px;
+  font-family: 'Ubuntu', Helvetica, Arial, sans-serif;
+  position: relative;
+  -webkit-transition: color .25s;
+  -moz-transition: color .25s;
+  -ms-transition: color .25s;
+  -o-transition: color .25s;
+  transition: color .25s;
+}
+header nav ul li a:hover {
+  color: black;
+}
+header nav ul li a:hover:before {
+  width: 100%;
+}
+header nav ul li a:after {
+  content: "";
+  display: block;
+  position: absolute;
+  right: -3px;
+  top: 19px;
+  height: 6px;
+  width: 6px;
+  background: white;
+  opacity: .5;
+}
+header nav ul li a:before {
+  content: "";
+  display: block;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 3px;
+  width: 0;
+  background: black;
+  -webkit-transition: width .25s;
+  -moz-transition: width .25s;
+  -ms-transition: width .25s;
+  -o-transition: width .25s;
+  transition: width .25s;
+}
+header nav ul li.last > a:after,
+header nav ul li:last-child > a:after {
+  display: none;
+}
+header nav ul li.active a {
+  color: black;
+}
+header nav ul:after {
+  content: " ";
+  display: block;
+  font-size: 0;
+  height: 0;
+  clear: both;
+  visibility: hidden;
+}
+@media only screen and (max-width: 479px) {
+  header nav ul li {
+    float: none;
+    display: block;
+  }
+  header nav ul li a,
+  header nav ul li a:link,
+  header nav ul li a:visited,
+  header nav ul li a:active {
+    width: 100%;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    border-bottom: 1px solid #9795f8;
+    padding: 0.5rem 1rem;
+  }
+  header nav ul li.last > a,
+  header nav ul li:last-child > a {
+    border: 0;
+  }
+  header nav ul li a:after {
+    display: none;
+  }
+  header nav ul li a:before {
+    display: none;
+  }
+}
+/* resets and overrides
+---------- */
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+html {
+  font-size: 100%;
+}
+body {
+  background: #e7e7e7;
+}
+img {
+  border: none;
+}
+table {
+  background: #ffffff;
+}
+/* links & type
+---------- */
+body,
+th,
+td {
+  font-family: 'Vollkorn', Georgia, Times, serif;
+  font-size: .9rem;
+  line-height: 1.3rem;
+}
+th {
+  font-family: 'Vollkorn', Georgia, Times, serif;
+  font-weight: bold;
+}
+a:link,
+a:active,
+a:visited {
+  color: #1410e4;
+}
+a:hover {
+  color: #3a36f1;
+  text-shadow: #e0e410;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: 'Ubuntu', Helvetica, Arial, sans-serif;
+  font-weight: normal;
+}
+ul,
+ol {
+  padding: 0 1rem;
+}
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+table,
+figure {
+  margin: 1rem 0 0 0;
+  line-height: 1.5em;
+}
+/* layout
+---------- */
+header {
+  background: #9795f8;
+  color: #e0e410;
+  font-family: 'Vollkorn', Georgia, Times, serif;
+}
+section :first-child {
+  margin-top: 0;
+}
+footer {
+  display: block;
+  clear: both;
+  padding: 0 0.5rem;
+  font-size: smaller;
+}
+img {
+  max-width: 100%;
+  max-height: 100%;
+}
+figcaption {
+  font-style: italic;
+}
+.main-container {
+  padding: 1rem;
+  margin: auto;
+  max-width: 55rem;
+  padding-bottom: 0;
+}
+@media only screen and (max-width: 479px) {
+  .main-container {
+    padding: 0;
+  }
+}
+.main-content {
+  float: left;
+  width: 75%;
+  padding-right: 1rem;
+}
+.main-content section {
+  background: #ffffff;
+  border-radius: 6px;
+  padding: 1rem;
+  margin-top: 1rem;
+}
+@media only screen and (max-width: 479px) {
+  .main-content section {
+    border-radius: 0;
+  }
+}
+@media only screen and (max-width: 479px) {
+  .main-content section {
+    margin-top: 0.5rem;
+  }
+}
+.main-content section:first-child {
+  margin-top: 0;
+}
+.aux-content {
+  float: left;
+  width: 25%;
+}
+.main-content,
+.aux-content {
+  display: -webkit-box;
+  /* OLD - iOS 6-, Safari 3.1-6 */
+  display: -moz-box;
+  /* OLD - Firefox 19- (buggy but mostly works) */
+  display: -ms-flexbox;
+  /* TWEENER - IE 10 */
+  display: -webkit-flex;
+  /* NEW - Chrome */
+  display: flex;
+  /* NEW, Spec - Opera 12.1, Firefox 20+ */
+  flex-direction: column;
+  -ms-flex-direction: column;
+  -webkit-flex-direction: column;
+  margin-bottom: 1rem;
+}
+@media only screen and (max-width: 479px) {
+  .main-content,
+  .aux-content {
+    float: none;
+    width: 100%;
+    min-width: 100%;
+    display: block;
+    padding: 0;
+    margin-bottom: 0.5rem;
+  }
+}
+/* callout boxes
+---------- */
+.well {
+  background: #ffffff;
+  border-radius: 6px;
+  padding: 1rem;
+}
+@media only screen and (max-width: 479px) {
+  .well {
+    border-radius: 0;
+  }
+}
+.well :first-child {
+  margin-top: 0;
+}
+/* form elements
+---------- */
+/* misc
+---------- */
+.backgroundHc {
+  background: #ffffff;
+}
+.backgroundShade1 {
+  background: #f5f5fe;
+}
+.centered {
+  text-align: center;
+}
+.right-aligned {
+  text-align: right;
+}

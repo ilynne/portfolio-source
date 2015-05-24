@@ -14,3 +14,9 @@ gem "wdm", "~> 0.1.0", :platforms => [:mswin, :mingw]
 gem "tzinfo-data", platforms: [:mswin, :mingw]
 
 gem 'rack-tidy'
+
+# group :assets do
+  gem 'less-rails', :require => false
+  gem "therubyracer", '~> 0.12.0'
+# end
+

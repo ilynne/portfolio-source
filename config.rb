@@ -77,4 +77,5 @@ configure :build do
   data.projects.project.each do |f|
     proxy "/projects/#{f['name'].gsub(/\s/,'-').downcase}.html", '/projects/template.html', :locals => { :title => f['name'], :image => f['image'], :date => f['date'], :artist => f['artist'], :project => f  }, :ignore => true
   end
+
 end

@@ -1,110 +1,106 @@
 /* foundation overrides */
-
 p {
   font-size: 0.9rem;
 }
-
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   font-family: 'Futura Light', Futura, 'Open Sans', sans-serif;
   font-weight: 300;
   text-transform: uppercase;
 }
-
 h1 {
   font-size: 2.2rem;
 }
-
 h2 {
   font-size: 2rem;
 }
-
 h3 {
   font-size: 1.8rem;
 }
-
 h3 {
   font-size: 1.6rem;
 }
-
 h3 {
   font-size: 1.4rem;
 }
-
 h3 {
   font-size: 1.2rem;
 }
-
 nav ul li a {
   color: lightgray;
 }
-
-nav ul li a:hover, nav ul li a:active {
+nav ul li a:hover,
+nav ul li a:active {
   color: white;
   color: lightyellow;
 }
-
 footer {
   background-color: #1a1a1a;
   padding: 1rem;
   color: lightgray;
   margin-top: 1rem;
 }
-
 footer p {
   text-align: center;
   margin-bottom: 0;
 }
-
 footer i.fa-inverse {
   color: #1a1a1a;
 }
-
 footer ul.inline-list {
   display: table;
   margin: 0 auto;
 }
-
 .copyright {
   font-size: 0.8rem;
 }
-
 time {
   font-weight: bold;
 }
-
 /* three column layout */
 .newspaper {
-  -webkit-columns: 12rem 3; /* Chrome, Safari, Opera */
-  -moz-columns: 12rem 3; /* Firefox */
+  -webkit-columns: 12rem 3;
+  /* Chrome, Safari, Opera */
+  -moz-columns: 12rem 3;
+  /* Firefox */
   columns: 12rem 3;
   border-top: 1px solid grey;
   border-bottom: 1px solid grey;
-  -webkit-column-rule: 1px outset grey; /* Chrome, Safari, Opera */
-  -moz-column-rule: 1px outset grey; /* Firefox */
+  -webkit-column-rule: 1px outset grey;
+  /* Chrome, Safari, Opera */
+  -moz-column-rule: 1px outset grey;
+  /* Firefox */
   column-rule: 1px outset grey;
   widows: 5;
   orphans: 5;
 }
-
 .newspaper h2 {
   -webkit-column-span: all;
   column-span: all;
 }
-
-figure, .columns {
+figure,
+.columns {
   /*border: 1px solid red;*/
 }
-
 figure {
   width: 100%;
   margin: 0;
 }
-
-.main, .columns .panel:first-child {
+.main,
+.columns .panel:first-child {
   margin-top: 1rem;
 }
-
 .panel {
   background-color: transparent;
   border-color: #f1f1f1;
+}
+code {
+  width: 100%;
+}
+a:hover {
+  text-decoration: underline;
 }

@@ -4,92 +4,45 @@
   <meta charset="utf-8" />
   <title><%= current_page.data.title || "#{project['name']}" || "Lynne Cooney" %></title>
   <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
-  <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300' rel='stylesheet' type='text/css'>
-  <%= stylesheet_link_tag "http://cdn.foundation5.zurb.com/foundation.css" %>
-  <%= stylesheet_link_tag "css/lynne-foundation" %>
+  <link href="http://fonts.googleapis.com/css?family=Ubuntu:bold" rel="stylesheet" type="text/css">
+  <link href="http://fonts.googleapis.com/css?family=Vollkorn" rel="stylesheet" type="text/css">
+  <%= stylesheet_link_tag "ilynne" %>
   <script src="js/vendor/modernizr.js"></script>
   </head>
   
   <body class="<%= page_classes.gsub(/_/,'-') %>">
     <header>
-      <nav class="top-bar" data-topbar>
-        <ul class="title-area">
-          <li class="name">
-            <h1><%= link_to 'Lynne Cooney'.upcase, '/index.html' %></h1>
-          </li>
-          <li class="toggle-topbar menu-icon"><a href="#"><span>menu</span></a></li>
-          <li class="toggle-topbar menu-icon"><a href="#"><span>menu</span></a></li>
+      <nav>
+        <ul>
+          <li><%= link_to 'Lynne Cooney'.upcase, '/index.html' %></li>
+          <li><%= link_to 'Resume', '/resume/index.html' %></li>
+          <li><%= link_to 'Projects', '/projects.html' %></li>
+          <li><a href="http://github.com/ilynne"><i class="fa fa-github fa-lg"></i> GitHub</a></li>
+          <li><a href="http://linkedin.com/in/lynnety"><i class="fa fa-linkedin-square fa-lg"></i> LinkedIn</a></li>
         </ul>
-        <section class="top-bar-section">
-          <!-- Right Nav Section -->
-          <ul class="right">
-            <li class="divider"></li>
-            <li>
-              <%= link_to 'Resume', '/resume/index.html' %>
-            </li>
-            <li class="divider"></li>
-            <li class="has-dropdown">
-              <%= link_to 'Projects', '/projects.html' %>
-              <ul class="dropdown">
-                <% data.projects.project.each do |f| %>
-                  <li><%= link_to "#{f['name']}", "/projects/#{f['name'].gsub(/\s/, '-').downcase}.html" %></li>
-                <% end %>
-              </ul>
-            </li>
-          </ul>
-        </section>
-
       </nav>
-
     </header>
 
-    <div class="row">
-      <div class="medium-9 columns">
-        <section class="main">
+    <div class="main-container cf">
+      <div class="main-content">
+        <section>
           <h1><%= current_page.data.title || "#{project['name']}" || "Lynne Cooney" %></h1>
           <%= yield %>
         </section>
       </div>
 
-      <div class="medium-3 columns">
-        <div class="panel">
+    <div class="aux-content cf">
+      <aside class="well backgroundShade1">
           <figure>
             <%= image_tag 'lynne-tiara.png', alt: 'Lynne in a pink hat' %>
             <figcaption>Every day is tiara day.</figcaption>
           </figure>
-        </div>
-
-      </div>
+      </aside>
     </div>
+  </div>
 
-    <footer>
-      <nav>
-        <ul class="inline-list">
-          <li>
-            <a href="http://facebook.com"><span class="fa-stack fa-2x">
-              <i class="fa fa-circle fa-stack-2x"></i>
-              <i class="fa fa-facebook fa-stack-1x fa-inverse"></i>
-            </span></a>
-          </li>
-          <li>
-            <a href="http://github.com/ilynne"><span class="fa-stack fa-2x">
-              <i class="fa fa-github fa-stack-2x"></i>
-            </span></a>
-          </li>
-          <li>
-            <a href="http://linkedin.com/in/lynnety"><span class="fa-stack fa-2x">
-              <i class="fa fa-circle fa-stack-2x"></i>
-              <i class="fa fa-linkedin fa-stack-1x fa-inverse"></i>
-            </span></a>
-          </li>
-        </ul>
-      </nav>
-      <p class="copyright">&copy;<time datetime="<%= DateTime.now.strftime('%Y') %>"><%= DateTime.now.strftime('%Y') %></time> Lynne Cooney. Last updated <time datetime="<%= DateTime.now.strftime('%F') %>"><%= DateTime.now.strftime('%-d %B %Y') %></time>.</p>
-    </footer>
-    <script src="http://code.jquery.com/jquery-latest.js"></script>
-    <script src="http://cdn.foundation5.zurb.com/foundation.js"></script>
-    <script>
-      $(document).foundation();
-    </script>
+  <footer>
+    <p class="centered">&copy;<time datetime="<%= DateTime.now.strftime('%Y') %>"><%= DateTime.now.strftime('%Y') %></time> Lynne Cooney. Last updated <time datetime="<%= DateTime.now.strftime('%F') %>"><%= DateTime.now.strftime('%-d %B %Y') %></time>.</p>
+  </footer>
   </body>
 </html>
