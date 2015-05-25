@@ -1,0 +1,114 @@
+{
+  "company": {
+    "mmp|BENCH": [
+      {
+        "name": "Public Site",
+        "summary": "Public facing site with log-in to Open Exchange. Site included a custom CMS for news and other stories. Prototyped in Ruby on Rails, built in ASP.Net. Open Exchange allowed uploads and input of key benchmarking data and produced charts and reports that hospitals used to improve patient care.",
+        "images": [
+          {
+            "src": "home-page-mmp-bench.png"
+          }
+        ]
+      }
+    ],
+    "Xante": [
+      {
+        "name": "Ilumina Digital Envelope Press",
+        "summary": "This is a sample product home page. Besides the server administration, database administration, ASP.Net development, HTML, CSS, JavaScript and design for this page I also did all the photgraphy.",
+        "images": [
+          {
+            "src": "product-ilumina-dep.png",
+            "caption": "I took all the photos for this and many other Xante pages."
+          }
+        ]
+      },
+      {
+        "name": "Home Page",
+        "summary": "Xante.com home page. All data-driven using ASP.Net and SQL Server.",
+        "images": [
+          {
+            "src": "home-page-xante.png"
+          }
+        ]
+      },
+      {
+        "name": "In$piration",
+        "summary": "Page with samples printed on the Ilumina.",
+        "images": [
+          {
+            "src": "inspiration-1.png"
+          },
+          {
+            "src": "inspiration-2.png"
+          }
+        ]
+      },
+      {
+        "name": "Business Cards",
+        "summary": "Simple order form for business cards. Used employee database to populate manager dropdown. User was able to click on editable fields to change them. Form sent an email with a confirm link to the manager. Once confirmed, the cards were sent to the production queue.",
+        "images": [
+          {
+            "src": "intranet-business-cards.png",
+            "caption": ""
+          }
+        ]
+      },
+      {
+        "name": "Production Queue",
+        "summary": "Application for Marketing Production Queue. Jobs for sales samples, tech support tests, in-house documents, etc. Each product specialist could view his own job queue. Jobs could be transferred. Status and notes could be tracked",
+        "images": [
+          {
+            "src": "intranet-job-queue.png",
+            "caption": ""
+          }
+        ]
+      }
+    ],
+    "United States Sports Academy": [
+      {
+        "name": "American Sport Art Museum and Archives",
+        "summary": "A division of the United States Sports Academy, ASAMA is dedicated to the preservation of sports history, art and literature. This site included virtual tours and an online store.",
+        "images": [
+          {
+            "src": "home-page-asama.png"
+          }
+        ]
+      },
+      {
+        "name": "Home Page",
+        "summary": "This is a screen capture from the Wayback Machine. Page looked better than this. Featured RSS feeds, recent news, careers, information for students and publications.",
+        "images": [
+          {
+            "src": "home-page.png"
+          }
+        ]
+      },
+      {
+        "name": "The Sport Journal",
+        "summary": "Home page for The Sport Journal. This was a quarterly publication. Entirely data-driven. I archived all past issues using an SQL Server database and html partials.",
+        "images": [
+          {
+            "src": "home-page-sport-journal.png"
+          }
+        ]
+
+      }
+    ],
+    "Radiskull and Devil Doll": [
+      {
+        "name": "Site Development",
+        "summary": "I worked on the Radiskull and Devil Doll official site. The credits page says it all: Perl programming and other scripting, organization, page building and layout. Radiskull and Devil Doll was the most popular cartoon on Shockwave.com at the time.",
+        "images": [
+          {
+            "src": "rdd-home-page.png",
+            "caption": "Now it's time to kick it!"
+          },
+          {
+            "src": "rdd-credits.png",
+            "caption": "My name memorialized on the internets."
+          }
+        ]
+      }
+    ]
+  }
+}

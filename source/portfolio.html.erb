@@ -1,0 +1,31 @@
+---
+title: Portfolio
+---
+
+
+<section class="portfolio">
+<h1><%= current_page.data.title || "#{project['name']}" || "Lynne Cooney" %></h2>
+  <p>This is a small sample of sites I have worked on over the years.</p>
+</section>
+<% data.portfolio.company.each do |f| %>
+<section class="portfolio">
+  <h3><%= f[0] %></h3>
+  <% f[1].each do |ff| %>
+    <h4><%= ff["name"] %></h4>
+    <p><%= ff["summary"] %></p>
+    <% if ff["images"].present? %>
+      <% ff["images"].each_with_index do |image, i| %>
+        <figure>
+          <% img_dir = f[0].downcase.gsub(/[^a-z]/,'') %>
+          <% img_src = "portfolio/#{img_dir}/#{image['src']}" %>
+          <% img_alt = image["alt"].present? ? image["alt"] : "#{ff['name']} image #{i + 1}" %>
+          <%= image_tag img_src, alt: img_alt %>
+          <% if image["caption"].present? %>
+            <figcaption><%= image["caption"] %></figcaption>
+          <% end %>
+        </figure>
+      <% end %>
+    <% end %>
+  <% end %>
+</section>
+<% end %>

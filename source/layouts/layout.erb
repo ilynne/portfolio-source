@@ -7,7 +7,7 @@
   <link href="http://fonts.googleapis.com/css?family=Ubuntu:bold" rel="stylesheet" type="text/css">
   <link href="http://fonts.googleapis.com/css?family=Vollkorn" rel="stylesheet" type="text/css">
   <%= stylesheet_link_tag "ilynne" %>
-  <script src="js/vendor/modernizr.js"></script>
+  <script src="//js/vendor/modernizr.js"></script>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   </head>
   
@@ -15,9 +15,10 @@
     <header>
       <nav>
         <ul>
-          <li <%= "class='active'" if current_page.path == 'index.html' %>><%= link_to 'Lynne Cooney'.upcase, '/index.html' %></li>
-          <li <%= "class='active'" if current_page.path == 'resume/index.html' %>><%= link_to 'Resume', '/resume/index.html' %></li>
-          <li <%= "class='active'" if current_page.path == 'colophon.html' %>><%= link_to 'Colophon', '/colophon.html' %></li>
+          <li class="print <%= "active" if current_page.path == 'index.html' %>"><%= link_to 'Lynne Cooney'.upcase, '/index.html' %></li>
+          <li <%= "class='active print'" if current_page.path == 'resume/index.html' %>><%= link_to 'Resume', '/resume/index.html' %></li>
+          <li <%= "class='active print'" if current_page.path == 'portfolio.html' %>><%= link_to 'Portfolio', '/portfolio.html' %></li>
+          <li <%= "class='active print'" if current_page.path == 'colophon.html' %>><%= link_to 'Colophon', '/colophon.html' %></li>
           <li><a href="http://github.com/ilynne"><i class="fa fa-github fa-lg"></i> GitHub</a></li>
           <li><a href="http://linkedin.com/in/lynnety"><i class="fa fa-linkedin-square fa-lg"></i> LinkedIn</a></li>
         </ul>
@@ -25,9 +26,9 @@
     </header>
 
     <div class="main-container cf">
-      <div class="main-content">
-        <%= yield %>
-      </div>
+<div class="main-content">
+  <%= yield %>
+</div>
 
     <div class="aux-content cf">
       <aside class="well backgroundShade1">
@@ -38,7 +39,7 @@
         <p><a href="mailto:lynne@ilynne.com">lynne@ilynne.com</a></p>
       </aside>
       
-      <aside class="well">
+      <aside class="well no-print">
         <h3>Wayback Machine:</h3>
         <ul>
           <li><a href="https://web.archive.org/web/19990428003854/http://www.arthritis.org/">Arthritis Foundation</a></li>

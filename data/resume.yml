@@ -13,22 +13,40 @@ resume:
     summary: Maintenance and updates to existing JSP/SQL Server site. Migrated database from SQL Server 2000 to SQL Server 2008. Built new site using ASP.Net C#.
   - company: Xante Corporation
     location: Mobile, AL
-    date_start: 2005-07-30
+    date_start: 2005-07-01
     date_end: 2011-06-17
     title: Web Developer
     summary: Over the course of my six years at Xante I wrote, maintained and updated internal and external web applications using ASP.Net, VB.Net and C#, JQuery, CSS, PHP and JSP. Oracle, Foxpro and Access database integration. Converted static sites to ASP.Net. Automated many site functions. Created intranet applications to allow content creators to update site. Wrote a custom email blast application. Built e-commerce site from the ground up. I photographed products for web and print. I created promotional videos and set up online streaming demos for the sales team.
+  - company: Perdido Key Parasail
+    location: Gulf Shores, AL
+    date_start: 2005-04-01
+    date_end: 2005-06-30
+    title: Web Developer
+    summary: Customer facing website and online reservation system built in PHP and MySQL. This was a contract job.
   - company: United States Sports Academy
     location: Daphne, AL
     date_start: 2003-11-01
-    date_end: 2005-02-30
+    date_end: 2005-03-31
     title: Web Developer
     summary: Five websites, internal and external.  Converted static html pages into a database driven, interactive site using ASP and SQL Server. Implemented a a new course delivery system using PHP and MySQL (Moodle). The course delivery system also interfaced with a Paradox based student information system, the new SQL Server student information system, an Access based commercial shopping cart and a custom shopping cart that I wrote for use during the migration to the commercial software. Also responsible for several major print publications.
+  - company: Freelance
+    location: Huntsville, AL
+    date_start: 2001-11-01
+    date_end: 2003-11-01
+    title: Web Developer
+    summary: Freelance web development projects using PHP and MySQL
   - company: MacHome Journal
     location: San Francisco, CA
     date_start: 2001-03-15
-    date_end: 2001-09-30
+    date_end: 2001-11-30
     title: Web Developer
     summary: Created data-driven site using Lasso and Filemaker. The site included a searchable database of product reviews & feature stories, tips, many customized subscription pages and product purchase pages. Responsible for local area network and all servers (mail, ftp, listservs, fileservers, etc.) Hardware support for Macintosh and PC computers.
+  - company: Radiskull and Devil Doll
+    location: San Francisco, CA
+    date_start: 2000-03-01
+    date_end: 2001-09-30
+    title: Web Developer
+    summary: Perl programming, scripting, site organization, page building, layout and maintenance for the official Radiskull and Devil Doll site. The most popular cartoon on Shockwave.com at the time.
   - company: Computer Task Group
     location: Atlanta, GA
     date_start: 1997-12-01

@@ -5,7 +5,11 @@ title: Resumé
 <% data.resume.resume.each do |f| %>
 <section>
   <h2><%= f[:title] %></h2>
-  <h3><%= "#{f[:company]}" %></h3>
+  <h3><%= "#{f[:company]}" %><br />
+    <% date_start = Date.parse("#{f[:date_start]}").strftime("%B %Y") %>
+    <% date_end = Date.parse("#{f[:date_end]}").strftime(" - %B %Y") rescue '' %>
+    <%= "#{date_start}" %><%= "#{date_end}" %>
+  </h3>
   <p><%= "#{f[:summary]}" %></p>
 </section>
 <% end %>

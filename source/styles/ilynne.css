@@ -115,6 +115,11 @@ header nav ul li a:before {
   -o-transition: width .25s;
   transition: width .25s;
 }
+@media "print" {
+  header nav ul li {
+    display: none;
+  }
+}
 header nav ul li.last > a:after,
 header nav ul li:last-child > a:after {
   display: none;
@@ -253,7 +258,7 @@ figcaption {
 .main-container {
   padding: 1rem;
   margin: auto;
-  max-width: 55rem;
+  max-width: 900px;
   padding-bottom: 0;
 }
 @media only screen and (max-width: 479px) {
@@ -323,6 +328,9 @@ figcaption {
     margin-bottom: 0.5rem;
   }
 }
+.portfolio img {
+  border: 1px solid #e7e7e7;
+}
 /* callout boxes
 ---------- */
 .well {
@@ -353,4 +361,35 @@ figcaption {
 }
 .right-aligned {
   text-align: right;
+}
+@media print {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-size: .9rem;
+  }
+  section {
+    margin: 0.25rem 0 !important;
+    padding: 0 !important;
+    page-break-inside: avoid !important;
+  }
+  header nav ul li a:link,
+  header nav ul li a:active,
+  header nav ul li a:visited {
+    padding: 0;
+    margin: 0 0.5rem;
+  }
+  header nav ul li a:after,
+  header nav ul li a:before {
+    display: none;
+  }
+  header nav ul li:not(.print) {
+    display: none;
+  }
+  .no-print {
+    display: none;
+  }
 }
