@@ -1,5 +1,16 @@
 {
   "company": {
+    "Kotis Design": [
+      {
+        "name": "Public Site",
+        "summary": "Public facing site.",
+        "images": [
+          {
+            "src": "kotis-knits-page.png"
+          }
+        ]
+      }
+    ],
     "mmp|BENCH": [
       {
         "name": "Public Site",

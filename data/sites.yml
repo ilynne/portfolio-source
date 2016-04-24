@@ -1,0 +1,14 @@
+like:
+  - name: DahlinSmithWhite
+    image: DahlinSmithWhite.png
+    url: https://web.archive.org/web/19961102171938/http://www.dsw.com/
+  - name: Apple
+    image: Apple.png
+    url: https://apple.com
+  - name: Ravelry
+    image: Ravelry.png
+    url: https://ravelry.com
+dislike:
+  - name: Webdesigner Depot
+    image: webdesignerdepot.png
+    url: http://www.webdesignerdepot.com

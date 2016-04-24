@@ -1,4 +1,10 @@
 resume:
+  - company: Kotis Design
+    location: Seattle, WA
+    date_start: 2015-06-01
+    date_end:
+    title: Software Engineer
+    summary: Ruby on Rails development for a variety of internal and public facing apps.
   - company: MyPizza.com
     location: remote
     date_start: 2014-01-30
